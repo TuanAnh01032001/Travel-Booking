@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+// All Project Colors
+:root {
+  --primaryColor: hsl(14, 90%, 53%);
+  --primaryColorLight: hsl(14, 96%, 91%);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 51%);
+  --inputColor: hsl(270, 12%, 97%);
+  --cardColor: hsl(300, 100%, 34%);
+
+  /* Font Sizes */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 4rem;
+  --h2FontSize: 2.5rem;
+  --h3FontSize: 2rem;
+  --normalFontSize: 1.876rem;
+  --smallFontSize: 1.626rem;
+  --smallestFontSize: 1.5rem;
+  --borderRadius: 3rem;
+}
+
+.accordionContainer {
+  .title {
+    font-size: var(--normalFontSize);
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: var(--primaryColorLight);
+
+    span {
+      cursor: pointer;
+      .icon {
+        font-size: 1.2rem;
+        color: var(--blackColor);
+      }
+    }
+  }
+  .description {
+    font-size: var(--smallFontSize);
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    white-space: pre-line;
+    height: 0px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    padding: 0 1.5rem;
+    background: var(--cardColor);
+    border-radius: 0 0 10px 10px;
+    color: var(--blackColor);
+  }
+
+  .show {
+    height: 140px;
+    opacity: 1;
+  }
+
+  .activeTitle {
+    background: var(--primaryColorLight);
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.questions {
+  .secHeading {
+    h3 {
+      padding-bottom: 1.5rem;
+    }
+    p {
+      font-size: var(--smallFontSize);
+      color: var(--blackColor);
+      padding-bottom: 1rem;
+    }
+  }
+
+  .secContainer {
+    display: grid;
+    grid-template-columns: 1fr; // Mặc định là 1 cột trên mobile
+    gap: 2rem;
+  }
+
+  .inquiry-form {
+    background-color: var(--whiteColor);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: var(--h2FontSize);
+      color: var(--blackColor);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: var(--smallFontSize);
+      color: var(--greyText);
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      input,
+      textarea {
+        padding: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: hsl(330 31% 84% / 1);
+        font-family: "Roboto", sans-serif;
+
+        &::placeholder {
+          color: var(--greyText);
+        }
+      }
+
+      textarea {
+        resize: none;
+        min-height: 150px;
+      }
+
+      .submit-btn {
+        background-color: var(--primaryColor);
+        color: var(--whiteColor);
+        padding: 1rem;
+        border: none;
+        border-radius: var(--borderRadius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: var(--primaryColor);
+        }
+      }
+    }
+  }
+}
+
+/* Responsive cho màn hình từ 640px trở lên */
+@media screen and (min-width: 640px) {
+  .accordionContainer {
+    .title {
+      font-size: var(--h3FontSize);
+
+      span {
+        .icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .description {
+      font-size: var(--normalFontSize);
+    }
+    .show {
+      height: 150px;
+    }
+  }
+
+  .questions {
+    .secHeading {
+      h3,
+      h4 {
+        font-size: var(--h2FontSize);
+      }
+      p {
+        font-size: var(--normalFontSize);
+      }
+    }
+
+    .secContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+      gap: 2rem;
+      .inquiry-form {
+        padding-bottom: 2rem;
+        .form {
+          input,
+          textarea {
+            font: var(--normalFontSize);
+            &::placeholder {
+              font-size: var(--normalFontSize);
+              color: var(--blackColor);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .accordionContainer {
+    .title {
+      font-size: var(--h3FontSize);
+
+      h3 {
+        .icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .description {
+      font-size: var(--normalFontSize);
+    }
+    .show {
+      height: 150px;
+    }
+  }
+
+  .questions {
+    .secHeading {
+      h3,
+      h4 {
+        font-size: var(--h2FontSize);
+      }
+      p {
+        font-size: var(--normalFontSize);
+      }
+    }
+
+    .secContainer {
+      display: grid;
+      align-items: start;
+      gap: 3rem;
+    }
+  }
+}

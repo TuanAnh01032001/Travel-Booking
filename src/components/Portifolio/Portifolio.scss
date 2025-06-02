@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+// All Project color
+:root {
+  --primaryColor: hsl(14, 90%, 53%);
+  --primaryColorLight: hsl(14, 96%, 91%);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 51%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.portifolio {
+  .secContainer {
+    gap: 2rem;
+    
+    .leftContent {
+      padding-left: 1rem;
+      .grid {
+        .singlePortifolio {
+          gap: 1rem;
+          align-items: flex-start;
+
+          .iconDiv {
+            img {
+              height: 50px;
+              width: 50px;
+            }
+          }
+          .info {
+            h4 {
+              padding-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+    .rightContainer {
+      text-align: center;
+      padding-right: 1rem;
+      img {
+        height: 250px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: 480px) {
+  .portifolio {
+    .secContainer {
+      .leftContent {
+        .secHeading {
+          h3 {
+            font-size: var(--h2FontSize);
+          }
+          p {
+            font-size: var(--normalFontSize);
+          }
+          .grid {
+            .singlePortifolio {
+              gap: 1.5rem;
+              .iconDiv {
+                img {
+                  padding-bottom: 0.5rem;
+                  font-size: var(--h3FontSize);
+                }
+                p {
+                  font-size: var(--normalFontSize);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .portifolio {
+    gap:3rem;
+    .secContainer {
+      width: 80%;
+      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
+      .leftContent {
+        .secHeading {
+          h3 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: var(--h3FontSize);
+          }
+          .grid {
+            grid-template-columns: repeat(2, 1fr); /* Thay đổi thành 2 cột */
+            .singlePortifolio {
+              gap: 1.5rem;
+              .rightContainer {
+                display: flex;
+                margin: auto;
+                align-items: center;
+                justify-content: center;
+                img {
+                  margin: auto;
+                  max-width: 80%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .portifolio {
+    .secContainer {
+        grid-template-columns: repeat(2, 1fr);
+      .leftContent {
+        .secHeading {
+          h3 {
+            font-size: var(--h2FontSize); /* Tăng kích thước tiêu đề */
+          }
+          p {
+            font-size: var(--h3FontSize); /* Tăng kích thước đoạn văn */
+          }
+          .grid {
+            grid-template-columns: repeat(1, 1fr); /* Đảm bảo 2 cột */
+            .singlePortifolio {
+              gap: 1.5rem; /* Tăng khoảng cách */
+              img {
+                max-width: 100%; /* Tăng chiều cao hình ảnh */
+                 }
+              }
+            
+            }
+          }
+        }
+      }
+      .rightContainer {
+        img {
+            max-width: 100%; /* Tăng chiều cao hình ảnh */
+        }
+      }
+    }
+  
+}
+
+@media screen and (min-width: 1240px) {
+  .portifolio {
+    .secContainer {
+      grid-template-columns: repeat(2, 1fr);
+      .leftContent {
+        padding-left: 150px;
+        .secHeading {
+          h3 {
+            font-size: 2rem; /* Tăng kích thước tiêu đề */
+          }
+          p {
+            font-size: var(--h3FontSize); /* Tăng kích thước đoạn văn */
+          }
+          .grid {
+            grid-template-columns: repeat(2, 1fr); /* Đảm bảo 2 cột */
+            .singlePortifolio {
+              gap: 2.5rem; /* Tăng khoảng cách */
+            }
+          }
+        }
+      }
+      .rightContainer {
+        width: 80%; /* Giảm chiều rộng xuống 50% */
+        height: 100%; /* Chiều cao tự động điều chỉnh theo tỷ lệ khung hình */
+        padding-left: 100px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+

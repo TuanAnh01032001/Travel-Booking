@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primaryColor: hsl(14, 90%, 53%);
+  --primaryColorLight: hsl(14, 96%, 91%);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 51%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.737);
+  border-bottom: 1.5px solid var(--primaryColor);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+.navBar .logoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBar .logoDiv span {
+  font-size: var(--h3FontSize);
+  color: var(--blackColor);
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .navBar .menu {
+    position: absolute;
+    width: 70%;
+    top: -100rem;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background: #f5e4e4;
+    padding: 2rem;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px 4px rgba(255, 254, 254, 0.1);
+  }
+  .navBar .menu li {
+    font-size: var(--h3FontSize);
+    font-weight: 500;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  .navBar .menu li:hover {
+    color: var(--primaryColor);
+    border: 1.5px solid var(--primaryColor);
+  }
+}
+.navBar .closeIcon,
+.navBar .menuIcon {
+  font-size: var(--h1FontSize);
+}
+.navBar .closeIcon:hover,
+.navBar .menuIcon:hover {
+  color: var(--primaryColor);
+}
+.navBar .closeIcon {
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  bottom: -15px;
+  transform: translate(-50%);
+  color: var(--blackColor);
+}
+.navBar .showNavBar {
+  top: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navBar .logoDiv .span {
+    font-size: var(--h2FontSize);
+  }
+  .navBar .closeIcon, .navBar .menuIcon {
+    display: none;
+  }
+  .navBar .menu ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .navBar .menu ul li {
+    font-size: var(--h3FontSize);
+    font-weight: 500;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  .navBar .menu ul li:hover {
+    color: var(--primaryColor);
+    border-bottom: 1.5px solid var(--primaryColor);
+  }
+}
+@media screen and (min-width: 1240px) {
+  .navBar {
+    padding: 2rem 6rem;
+  }
+  .navBar .menu ul {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 1440) {
+  .navBar {
+    padding: 2rem 14rem;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */
