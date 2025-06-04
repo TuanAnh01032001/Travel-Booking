@@ -15,10 +15,7 @@ const Questions = () => {
     // Handle form submission here
     console.log("Email:", email, "Question:", question);
   };
-    //animation scroll
-      useEffect(() => {
-        Aos.init({duration:2000})
-      },[])
+   
   
   return (
     <div className="questions section container">

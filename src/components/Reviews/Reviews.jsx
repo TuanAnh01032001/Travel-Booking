@@ -13,10 +13,7 @@ import image6 from "../../Assets/image4.jpg"
 
 const Reviews = () => {
 
-  //animation scroll
-        useEffect(() => {
-          Aos.init({duration:200})
-        },[])
+
 
   return (
     <div className="review section container">

@@ -5,9 +5,7 @@ import './Middle.scss'
 
 const Middle = () => {
 
-    useEffect(() => {
-      Aos.init({duration:500})
-    },[])
+  
   return (
     <div className="middle section">
       <div className="secContainer container">

@@ -13,9 +13,7 @@ import image4 from "../../Assets/image8.jpg"
 
 const Home = () => {
 
-  useEffect(() => {
-    Aos.init({duration:2000})
-  },[])
+ 
 
   return (
    <div className="Home">

@@ -9,10 +9,6 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
 
-   //animation scroll
-    useEffect(() => {
-      Aos.init({ duration: 1000 });
-    }, []);
 
   return (
     <div className="footer">

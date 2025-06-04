@@ -11,9 +11,6 @@ import image from '../../Assets/girdImage.png'
 
 const Portifolio = () => {
 
-    useEffect(() => {
-      Aos.init({duration:2000})
-    },[])
 
   return (
    

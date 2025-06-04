@@ -79,9 +79,7 @@ const destinations =[
 ]
 const Destinations = () => {
 
-    useEffect(() => {
-      Aos.init({duration:2000})
-    },[])
+
 
   return (
     <div className="destinations section container">

@@ -7,9 +7,7 @@ import { FaAngleDoubleUp } from "react-icons/fa";
 
 const Accordion = ({ title, desc, active, setActive }) => {
   //animation scroll
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+
   return (
     <div className="accordionContainer">
       <span className="title flex" >
